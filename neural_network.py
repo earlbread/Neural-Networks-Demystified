@@ -21,3 +21,7 @@ class NeuralNetwork():
 
     def sigmoid(self, z):
         return 1 / (1 + np.exp(-z))
+
+    def cost(self, y, y_hat):
+        diff = y - y_hat
+        return np.mean(np.sum(diff ** 2))
